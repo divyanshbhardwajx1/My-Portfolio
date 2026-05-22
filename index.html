@@ -238,7 +238,7 @@
   .stat-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.72rem;
-    color: var(--dim);
+    color: var(--muted);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
@@ -559,17 +559,118 @@
 
   /* ── Responsive ── */
   @media (max-width: 768px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    #hero { padding: 7rem 1.5rem 4rem; }
-    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; }
-    .contact-box { padding: 2.5rem 1.5rem; }
-    footer { flex-direction: column; gap: 0.75rem; text-align: center; }
-    .container { padding: 0 1.25rem; }
+  /* Nav */
+  nav {
+    padding: 1rem 1.5rem;
   }
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  /* Hero */
+  #hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+  }
+  .hero-title .line {
+    white-space: normal;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  /* Hero grid — stack photo below on mobile */
+  #hero > div[style] {
+    grid-template-columns: 1fr !important;
+  }
+  #hero img {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0 auto;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Skills */
+  #skills .container > div[style] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Achievements */
+  #achievements .container > div[style] > div {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card.featured {
+    grid-column: span 1;
+  }
+
+  /* Certifications */
+  #certifications .container > div[style] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact */
+  .contact-box {
+    padding: 2rem 1.25rem;
+  }
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-chip {
+    justify-content: center;
+  }
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  /* Container */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Section padding */
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
 </style>
 </head>
 <body>
